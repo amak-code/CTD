@@ -2,8 +2,8 @@ function TodoForm() {
   return (
     <>
       <form action="">
-        <label htmlFor="toDoTitle">ToDo</label>
-        <input type="text" id="toDoTitle" />
+        <label htmlFor="todoTitle">ToDo</label>
+        <input type="text" id="todoTitle" />
         <button type="submit">Add ToDo</button>
       </form>
     </>
