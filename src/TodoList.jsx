@@ -6,14 +6,22 @@ import TodoListItem from './TodoListItem.jsx';
 //   { id: 3, title: 'code out app' },
 // ];
 
-function TodoList({ todoList }) {
+function TodoList({ todoList, onCompleteTodo }) {
   return (
     <div>
-      <ul>
-        {todoList.map((todo) => (
-          <TodoListItem key={todo.id} title={todo.title} />
-        ))}
-      </ul>
+      {todoList.length === 0 ? (
+        <p>Add todo above to get started</p>
+      ) : (
+        <ul>
+          {todoList.map((todo) => (
+            <TodoListItem
+              key={todo.id}
+              todo={todo}
+              onCompleteTodo={onCompleteTodo}
+            />
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
