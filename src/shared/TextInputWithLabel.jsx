@@ -1,15 +1,15 @@
 const TextInputWithLabel = ({ label, value, onChange, ref, elementId }) => {
   return (
-    <div>
+    <>
       <label htmlFor={elementId}>{label}</label>
       <input
         type="text"
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={onChange}
         id={elementId}
         ref={ref}
       />
-    </div>
+    </>
   );
 };
 

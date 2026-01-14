@@ -6,7 +6,7 @@ import TodoListItem from './TodoListItem.jsx';
 //   { id: 3, title: 'code out app' },
 // ];
 
-function TodoList({ todoList, onCompleteTodo }) {
+function TodoList({ todoList, onCompleteTodo, onUpdateTodo }) {
   const filteredTodoList = todoList.filter((todo) => !todo.isCompleted);
   console.log(filteredTodoList);
 
@@ -21,6 +21,7 @@ function TodoList({ todoList, onCompleteTodo }) {
               key={todo.id}
               todo={todo}
               onCompleteTodo={onCompleteTodo}
+              onUpdateTodo={onUpdateTodo}
             />
           ))}
         </ul>
